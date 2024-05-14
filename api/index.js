@@ -20,6 +20,8 @@ app.post("/contact", async (req, res) => {
   // Extract the email, subject and message from form body
   const { email, subject, message } = req.body;
 
+  // TODO: Add email, subject and message validation
+
   // Use Resend to send an email
   await resend.emails.send({
     from: "demo@blair.nz",
