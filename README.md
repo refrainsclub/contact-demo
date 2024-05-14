@@ -1,5 +1,10 @@
 # Contact Demo
 
-Contact form demo written using Node.js and HTML.
+Contact form demo using Node.js, Express.js and Resend.
 
-**NEVER UPLOAD YOUR .ENV FILE TO GITHUB!!!**
+Make sure to create a `.env` file with `RESEND_API_KEY=YOUR_KEY_HERE`.
+
+```
+npm install
+node .
+```

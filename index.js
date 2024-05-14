@@ -12,6 +12,9 @@ const app = express();
 // Add middleware to parse form body
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// Serve static files
+app.use(express.static("public"));
+
 // Use Resend email API with key from environment variables
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -31,10 +34,10 @@ app.post("/contact", async (req, res) => {
   });
 
   // Redirect to the success page
-  res.redirect("http://127.0.0.1:3000/ok");
+  res.redirect("/success.html");
 });
 
-// Make express app listen on port 8080
-app.listen(8080, () => {
-  console.log("now listening on port 8080");
+// Make express app listen on port 3000
+app.listen(3000, () => {
+  console.log("Listening on http://localhost:3000");
 });
