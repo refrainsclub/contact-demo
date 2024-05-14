@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Demo</title>
+  </head>
+  <body>
+    <form method="post" action="http://127.0.0.1:8080/contact">
+      <label>
+        Email
+        <input type="email" name="email" />
+      </label>
+      <label>
+        Subject
+        <input type="text" name="subject" minlength="8" maxlength="32" />
+      </label>
+      <label>
+        Message
+        <input type="text" name="message" minlength="50" maxlength="500"/>
+      </label>
+
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>
